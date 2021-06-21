@@ -1,71 +1,40 @@
-This is an example page for exercises to be done for the workshop. You would remove this page, replace it with your own and then adjust the `workshop.yaml` and `modules.yaml` file to list your pages instead.
+## How to complete this guide
 
-In this example the pages which make up the core of the workshop content are placed in a sub directory. This is only done as a suggestion. You can place all pages at the same directory level if you wish.
+Like most Spring [Getting Started guides](https://spring.io/guides), you can start from scratch and complete each step or you can bypass basic setup steps that are already familiar to you. Either way, you end up with working code.
 
-Included below are some tests and examples of page formatting using Markdown.
+To **start from scratch**, move on to [Starting with Spring Initializr](https://spring.io/guides/gs/spring-boot/#scratch).
 
-#### Standard code block
+To **skip the basics**, do the following:
 
-```
-echo "standard code block"
-```
 
-#### Click text to execute
 
-```execute
-echo "execute in terminal 1"
-```
+*   [Download](https://github.com/spring-guides/gs-spring-boot/archive/main.zip) and unzip the source repository for this guide, or clone it using [Git](https://spring.io/understanding/Git): <code>git clone [https://github.com/spring-guides/gs-spring-boot.git](https://github.com/spring-guides/gs-spring-boot.git)</code>
+*   cd into <code>gs-spring-boot/initial</code>
+*   Jump ahead to [Create a Simple Web Application](https://spring.io/guides/gs/spring-boot/#initial).
 
-#### Click text to execute (with target)
+<strong>When you finish</strong>, you can check your results against the code in <code>gs-spring-boot/complete</code>.
 
-```execute-1
-echo "execute in terminal 1"
-```
 
-```execute-2
-echo "execute in terminal 2"
-```
+## Learn What You Can Do with Spring Boot
 
-```execute-all
-echo "execute in all terminals"
-```
+Spring Boot offers a fast way to build applications. It looks at your classpath and at the beans you have configured, makes reasonable assumptions about what you are missing, and adds those items. With Spring Boot, you can focus more on business features and less on infrastructure.
 
-#### Click text to copy
+The following examples show what Spring Boot can do for you:
 
-```copy
-echo "copy text to buffer"
-```
 
-#### Click text to copy (and edit)
 
-```copy-and-edit
-echo "copy text to buffer"
-```
+*   Is Spring MVC on the classpath? There are several specific beans you almost always need, and Spring Boot adds them automatically. A Spring MVC application also needs a servlet container, so Spring Boot automatically configures embedded Tomcat.
+*   Is Jetty on the classpath? If so, you probably do NOT want Tomcat but instead want embedded Jetty. Spring Boot handles that for you.
+*   Is Thymeleaf on the classpath? If so, there are a few beans that must always be added to your application context. Spring Boot adds them for you.
 
-#### Interrupt command
+These are just a few examples of the automatic configuration Spring Boot provides. At the same time, Spring Boot does not get in your way. For example, if Thymeleaf is on your path, Spring Boot automatically adds a `SpringTemplateEngine` to your application context. But if you define your own `SpringTemplateEngine` with your own settings, Spring Boot does not add one. This leaves you in control with little effort on your part.
 
-```execute
-sleep 3600
-```
 
-```execute
-<ctrl-c>
-```
-
-#### Variable interpolation
-
-workshop_name: {{ workshop_name }}
-
-session_namespace: {{ session_namespace }}
-
-workshop_namespace: {{ workshop_namespace }}
-
-training_portal: {{ training_portal }}
-
-ingress_domain: {{ ingress_domain }}
-
-ingress_protocol: {{ ingress_protocol }}
-
-#### Web site links
-
-[External](https://github.com/eduk8s)
+<table>
+  <tr>
+   <td>
+   </td>
+   <td>Spring Boot does not generate code or make edits to your files. Instead, when you start your application, Spring Boot dynamically wires up beans and settings and applies them to your application context.
+   </td>
+  </tr>
+</table>
