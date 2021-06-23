@@ -4,7 +4,7 @@
 If you use Maven, visit the [Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.5.0&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=spring-boot&name=spring-boot&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.spring-boot&dependencies=web) to generate a new project with the required dependencies (Spring Web):
 
 ```editor:execute-command
-command: spring.initializr
+command: spring.initializr.maven-project
 args:
 	- language: Java
 	  dependencies: [ "actuator", "webflux" ]
