@@ -3,8 +3,14 @@
 
 If you use Maven, visit the [Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.5.0&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=spring-boot&name=spring-boot&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.spring-boot&dependencies=web) to generate a new project with the required dependencies (Spring Web):
 
-```execute-1
-curl https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.5.0&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=spring-boot&name=spring-boot&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.spring-boot&dependencies=web 
+```editor:execute-command
+command: spring.initializr.maven-project
+args:
+- language: Java
+  dependencies: [ "web"]
+  artifactId: spring-boot
+  groupId: com.example
+  jvmVersion: 11
 ```
 
 The following listing shows the `pom.xml` file that is created when you choose Maven:

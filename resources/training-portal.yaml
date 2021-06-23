@@ -9,5 +9,6 @@ spec:
   workshops:
   - name: lab-sb-app
     capacity: 1
-    expires: 60m
-    orphaned: 5m
+    expires: 460m
+    orphaned: 95m
+    reserved: 0
