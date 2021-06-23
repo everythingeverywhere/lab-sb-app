@@ -6,7 +6,10 @@ If you use Maven, visit the [Spring Initializr](https://start.spring.io/#!type=m
 ```editor:execute-command
 command: spring.initializr
 args:
-		- defaultLanguage: Java
+- language: Java
+  dependencies: [ "actuator", "webflux" ]
+  artifactId: demo
+  groupId: com.example
 ```
 
 dependencies: [ "web"]
