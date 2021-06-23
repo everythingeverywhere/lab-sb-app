@@ -6,13 +6,12 @@ If you use Maven, visit the [Spring Initializr](https://start.spring.io/#!type=m
 ```editor:execute-command
 command: spring.initializr.maven-project
 args:
-- language: Java
-  dependencies: [ "web"]
-  artifactId: spring-boot
-  groupId: com.example
-  jvmVersion: 11
+		- language: Java
+		  dependencies: [ "web"]
+		  artifactId: spring-boot
+		  groupId: com.example
 ```
-
+		  jvmVersion: 11
 The following listing shows the `pom.xml` file that is created when you choose Maven:
 
 
