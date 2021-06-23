@@ -9,6 +9,18 @@ modules:
         name: Sample Content
     exercises/02-exe:
         name: Starting
+    exercises/03-exe:
+        name: Starting
+    exercises/04-exe:
+        name: Starting
+    exercises/05-exe:
+        name: Starting
+    exercises/06-exe:
+        name: Starting
+    exercises/07-exe:
+        name: Starting
+    exercises/08-exe:
+        name: Starting
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop

@@ -6,4 +6,10 @@ modules:
     - setup-environment
     - exercises/01-sample-content
     - exercises/02-exe
+    - exercises/03-exe
+    - exercises/04-exe
+    - exercises/05-exe
+    - exercises/06-exe
+    - exercises/07-exe
+    - exercises/08-exe
     - workshop-summary
