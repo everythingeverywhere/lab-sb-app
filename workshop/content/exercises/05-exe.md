@@ -3,24 +3,15 @@
 
 To run the application, run the following command in a terminal window (in the `complete`) directory:
 
-
-```
-./gradlew bootRun
-```
-
-
 If you use Maven, run the following command in a terminal window (in the `complete`) directory:
 
-
-```
+```execute-1
+cd spring-boot
 ./mvnw spring-boot:run
 ```
 
-
 You should see output similar to the following:
-
-
-```
+```bash
 Let's inspect the beans provided by Spring Boot:
 application
 beanNameHandlerMapping
@@ -59,14 +50,15 @@ viewControllerHandlerMapping
 
 ```
 
-
 You can clearly see `org.springframework.boot.autoconfigure` beans. There is also a `tomcatEmbeddedServletContainerFactory`.
 
-Now run the service with curl (in a separate terminal window), by running the following command (shown with its output):
+Now run the service with curl (in a separate terminal window), by running the following command:
 
-
+```execute-2
+curl localhost:8080
 ```
-$ curl localhost:8080
+Output you should see should reflect the following
+```bash
 Greetings from Spring Boot!
 COPY
 ```
