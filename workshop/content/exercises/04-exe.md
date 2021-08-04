@@ -4,6 +4,32 @@
 The Spring Initializr creates a simple application class for you. However, in this case, it is too simple. You need to modify the application class to match the following listing (from `src/main/java/com/example/springboot/Application.java`):
 
 
+```editor:insert-lines-before-line
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+line: 3
+text: |
+      import java.util.Arrays;
+      
+```
+
+
+```
+    @Bean
+    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+        return args -> {
+
+            System.out.println("Let's inspect the beans provided by Spring Boot:");
+
+            String[] beanNames = ctx.getBeanDefinitionNames();
+            Arrays.sort(beanNames);
+            for (String beanName : beanNames) {
+                System.out.println(beanName);
+            }
+
+        };
+```
+
+
 ```editor:append-lines-to-file
 file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
 text: |
