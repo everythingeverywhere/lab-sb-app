@@ -7,7 +7,7 @@ You need a new project with the dependency `Spring Web`. There are many ways to 
 
 You will use curl to start your Spring Boot project, take a note of that we are choosing the web depenedency.
 ```execute-1
-curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=2.5.1 -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot-initial.zip
+curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=2.5.1 -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot.zip
 
 mkdir spring-boot
 
