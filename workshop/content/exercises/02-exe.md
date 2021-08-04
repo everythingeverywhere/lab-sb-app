@@ -7,18 +7,10 @@ You need a new project with the dependency `Spring Web`. There are many ways to 
 
 
 We will take advantage of the embedded IDE (vs code) in this workshop to begin our project. Click the next command to open the text editor with an input bar will open.
-```editor:execute-command
-command: spring.initializr.maven-project
-args:
-	- language: Java
-	  dependencies: [ "web" ]
-	  artifactId: spring-boot
-	  groupId: com.example
-```
 
 ```execute-1
 curl -d dependencies=web -d bootVersion=2.5.1 -d artifactId=spring-boot -dgroupId=com.example -d language=java
-
+```
 
 The `pom.xml` is created when you choose Maven, this is where your dependency of `Spring Web` was added for you. 
 

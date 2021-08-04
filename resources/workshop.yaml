@@ -19,7 +19,5 @@ spec:
       terminal:
         enabled: true
         layout: split
-      console:
-        enabled: true
       editor:
         enabled: true
