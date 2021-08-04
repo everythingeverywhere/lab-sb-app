@@ -4,11 +4,22 @@
 The Spring Initializr creates a simple application class for you. However, in this case, it is too simple. You need to modify the application class to match the following listing (from `src/main/java/com/example/springboot/Application.java`):
 
 
+First we will import the Arrays class in java, this class provides static methods to dynamically create and access Java arrays.
 ```editor:insert-lines-before-line
 file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
 line: 3
 text: |
       import java.util.Arrays;
+```
+
+Let's quickly import a few more classes and explain them as we include
+```editor:insert-lines-before-line
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+line: 3
+text: |
+      import org.springframework.boot.CommandLineRunner;
+      import org.springframework.context.ApplicationContext;
+      import org.springframework.context.annotation.Bean;
       
 ```
 
