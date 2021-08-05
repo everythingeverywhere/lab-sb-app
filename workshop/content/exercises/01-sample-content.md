@@ -1,27 +1,8 @@
-## How to complete this guide
-
-Like most Spring [Getting Started guides](https://spring.io/guides), you can start from scratch and complete each step or you can bypass basic setup steps that are already familiar to you. Either way, you end up with working code.
-
-To **start from scratch**, move on to [Starting with Spring Initializr](https://spring.io/guides/gs/spring-boot/#scratch).
-
-To **skip the basics**, do the following:
-
-
-
-*   [Download](https://github.com/spring-guides/gs-spring-boot/archive/main.zip) and unzip the source repository for this guide, or clone it using [Git](https://spring.io/understanding/Git): <code>git clone [https://github.com/spring-guides/gs-spring-boot.git](https://github.com/spring-guides/gs-spring-boot.git)</code>
-*   cd into <code>gs-spring-boot/initial</code>
-*   Jump ahead to [Create a Simple Web Application](https://spring.io/guides/gs/spring-boot/#initial).
-
-<strong>When you finish</strong>, you can check your results against the code in <code>gs-spring-boot/complete</code>.
-
-
 ## Learn What You Can Do with Spring Boot
 
 Spring Boot offers a fast way to build applications. It looks at your classpath and at the beans you have configured, makes reasonable assumptions about what you are missing, and adds those items. With Spring Boot, you can focus more on business features and less on infrastructure.
 
 The following examples show what Spring Boot can do for you:
-
-
 
 *   Is Spring MVC on the classpath? There are several specific beans you almost always need, and Spring Boot adds them automatically. A Spring MVC application also needs a servlet container, so Spring Boot automatically configures embedded Tomcat.
 *   Is Jetty on the classpath? If so, you probably do NOT want Tomcat but instead want embedded Jetty. Spring Boot handles that for you.

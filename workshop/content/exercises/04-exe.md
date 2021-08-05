@@ -63,9 +63,14 @@ text: |
 
 Did you notice that there was not a single line of XML? There is no `web.xml` file, either. This web application is 100% pure Java and you did not have to deal with configuring any plumbing or infrastructure.
 
-There is also a `CommandLineRunner` method marked as a `@Bean`, and this runs on start up. It retrieves all the beans that were created by your application or that were automatically added by Spring Boot. It sorts them and prints them out.
+There is also a `CommandLineRunner` method marked as a `@Bean`, and this runs on start up. 
+```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+text: "@Bean"
+```
+It retrieves all the beans that were created by your application or that were automatically added by Spring Boot. It sorts them and prints them out.
 
 ```editor:select-matching-text
 file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
-text: "CommandLineRunner"
+text: "@Bean"
 ```

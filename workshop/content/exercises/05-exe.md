@@ -5,7 +5,7 @@ To run the application, run the following command in a terminal window (in the `
 
 If you use Maven, run the following command in a terminal window (in the `complete`) directory:
 
-```execute-1
+```execute-2
 cd spring-boot
 ./mvnw spring-boot:run
 ```

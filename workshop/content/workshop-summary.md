@@ -7,9 +7,11 @@ Congratulations! You built a simple web application with Spring Boot and learned
 
 ## See Also
 
-The following guides may also be helpful:
+To complete this guide locallly on your machine see [Building an Application with Spring Boot](https://spring.io/guides/gs/spring-boot/)
 
+Here you can find most Spring [Getting Started guides](https://spring.io/guides)
 
+The following guides in particular may also be helpful:
 
 *   [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
 *   [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
