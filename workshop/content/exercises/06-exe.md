@@ -4,8 +4,19 @@
 You will want to add a test for the endpoint you added, and Spring Test provides some machinery for that.
 
 
-If you use Maven, add the following to your `pom.xml` file:
+If you use Maven, the `spring-boot-starter-test` dependency should be added to your `pom.xml` file.
+```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/HelloController.java
+text: "spring-boot-starter-test"
+before: 2
+after: 2
 ```
+
+
+```editor:insert-lines-before-line
+file: ~/spring-boot/pom.xml
+line: 20
+text: |
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-test</artifactId>
