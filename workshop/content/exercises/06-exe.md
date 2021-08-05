@@ -3,62 +3,52 @@
 
 You will want to add a test for the endpoint you added, and Spring Test provides some machinery for that.
 
-If you use Gradle, add the following dependency to your `build.gradle` file:
-
-
-```
-testImplementation('org.springframework.boot:spring-boot-starter-test')
-COPY
-```
-
 
 If you use Maven, add the following to your `pom.xml` file:
-
-
 ```
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-test</artifactId>
 	<scope>test</scope>
 </dependency>
-COPY
 ```
 
 
 Now write a simple unit test that mocks the servlet request and response through your endpoint, as the following listing (from `src/test/java/com/example/springboot/HelloControllerTest.java`) shows:
 
 
-```
-package com.example.springboot;
+```editor:append-lines-to-file
+file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerTest.java
+text: |
+		package com.example.springboot;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+		import static org.hamcrest.Matchers.equalTo;
+		import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+		import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import org.junit.jupiter.api.Test;
+		import org.junit.jupiter.api.Test;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+		import org.springframework.beans.factory.annotation.Autowired;
+		import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+		import org.springframework.boot.test.context.SpringBootTest;
+		import org.springframework.http.MediaType;
+		import org.springframework.test.web.servlet.MockMvc;
+		import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-@SpringBootTest
-@AutoConfigureMockMvc
-public class HelloControllerTest {
+		@SpringBootTest
+		@AutoConfigureMockMvc
+		public class HelloControllerTest {
 
-	@Autowired
-	private MockMvc mvc;
+			@Autowired
+			private MockMvc mvc;
 
-	@Test
-	public void getHello() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("Greetings from Spring Boot!")));
-	}
-}
-COPY
+			@Test
+			public void getHello() throws Exception {
+				mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+						.andExpect(status().isOk())
+						.andExpect(content().string(equalTo("Greetings from Spring Boot!")));
+			}
+		}
 ```
 
 
@@ -67,7 +57,9 @@ COPY
 As well as mocking the HTTP request cycle, you can also use Spring Boot to write a simple full-stack integration test. For example, instead of (or as well as) the mock test shown earlier, we could create the following test (from `src/test/java/com/example/springboot/HelloControllerIT.java`):
 
 
-```
+```editor:append-lines-to-file
+file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerIT.java
+text: |
 package com.example.springboot;
 
 import static org.assertj.core.api.Assertions.*;
@@ -106,7 +98,6 @@ public class HelloControllerIT {
         assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
     }
 }
-COPY
 ```
 
 

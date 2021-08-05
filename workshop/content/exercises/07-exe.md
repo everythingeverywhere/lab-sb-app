@@ -4,39 +4,25 @@
 
 If you are building a web site for your business, you probably need to add some management services. Spring Boot provides several such services (such as health, audits, beans, and more) with its [actuator module](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready).
 
-If you use Gradle, add the following dependency to your `build.gradle` file:
-
-
-```
-implementation 'org.springframework.boot:spring-boot-starter-actuator'
-COPY
-```
-
-
 If you use Maven, add the following dependency to your `pom.xml` file:
 
 
-```
-<dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-actuator</artifactId>
-</dependency>
-COPY
+```editor:insert-lines-before-line
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+line: 3
+text: |
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+      </dependency>
 ```
 
 
 Then restart the application. If you use Gradle, run the following command in a terminal window (in the `complete` directory):
 
-
-```
-./gradlew bootRun
-```
-
-
 If you use Maven, run the following command in a terminal window (in the `complete` directory):
 
-
-```
+```execute-2
 ./mvnw spring-boot:run
 ```
 
@@ -58,7 +44,7 @@ management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.Metric
 management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
 management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
 management.trace.http-org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceProperties
-COPY
+
 ```
 
 
@@ -85,21 +71,24 @@ You can check the health of the application by running the following command:
 
 
 ```
-$ curl localhost:8080/actuator/health
-{"status":"UP"}
-COPY
+curl localhost:8080/actuator/health
 ```
 
+This should show:
+```bash
+{"status":"UP"}
+```
 
 You can try also to invoke shutdown through curl, to see what happens when you have not added the necessary line (shown in the preceding note) to `application.properties`:
 
 
+```bash
+curl -X POST localhost:8080/actuator/shutdown
 ```
-$ curl -X POST localhost:8080/actuator/shutdown
+The previous command will return something like
+```bash
 {"timestamp":1401820343710,"error":"Not Found","status":404,"message":"","path":"/actuator/shutdown"}
-COPY
 ```
-
 
 Because we did not enable it, the requested endpoint is not available (because the endpoint does not exist).
 

@@ -60,7 +60,6 @@ curl localhost:8080
 Output you should see should reflect the following
 ```bash
 Greetings from Spring Boot!
-COPY
 ```
 
 

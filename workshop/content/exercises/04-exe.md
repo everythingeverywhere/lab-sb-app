@@ -58,6 +58,7 @@ text: |
                 }
 
             };
+        }
 ```
 
 Did you notice that there was not a single line of XML? There is no `web.xml` file, either. This web application is 100% pure Java and you did not have to deal with configuring any plumbing or infrastructure.
