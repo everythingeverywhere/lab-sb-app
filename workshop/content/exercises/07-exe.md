@@ -4,12 +4,10 @@
 
 If you are building a web site for your business, you probably need to add some management services. Spring Boot provides several such services (such as health, audits, beans, and more) with its [actuator module](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready).
 
-If you use Maven, add the following dependency to your `pom.xml` file:
-
-
+Add the `spring-boot-starter-actuator ` dependency to your `pom.xml` file:
 ```editor:insert-lines-before-line
-file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
-line: 3
+file: ~/spring-boot/pom.xml
+line: 20
 text: |
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -63,12 +61,9 @@ There is also an <code>/actuator/shutdown</code> endpoint, but, by default, it i
 
 
 You can check the health of the application by running the following command:
-
-
 ```execute-1
 curl localhost:8080/actuator/health
 ```
-
 This should show:
 ```bash
 {"status":"UP"}
