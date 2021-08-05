@@ -2,7 +2,6 @@
 
 Now you can create a web controller for a simple web application, as the following listing (from `src/main/java/com/example/springboot/HelloController.java`) shows:
 
-
 ```editor:append-lines-to-file
 file: ~/spring-boot/src/main/java/com/example/springboot/HelloController.java
 text: |
