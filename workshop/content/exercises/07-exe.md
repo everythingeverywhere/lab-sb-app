@@ -20,7 +20,7 @@ text: |
 
 Then restart the application. If you use Gradle, run the following command in a terminal window (in the `complete` directory):
 
-If you use Maven, run the following command in a terminal window (in the `complete` directory):
+Run the following command in a terminal window (in the `complete` directory):
 
 ```execute-2
 ./mvnw spring-boot:run
@@ -29,8 +29,7 @@ If you use Maven, run the following command in a terminal window (in the `comple
 
 You should see that a new set of RESTful end points have been added to the application. These are management services provided by Spring Boot. The following listing shows typical output:
 
-
-```
+```bash
 management.endpoint.configprops-org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties
 management.endpoint.env-org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties
 management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties
@@ -44,14 +43,10 @@ management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.Metric
 management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
 management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
 management.trace.http-org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceProperties
-
 ```
 
 
 The actuator exposes the following:
-
-
-
 *   [actuator/health](http://localhost:8080/actuator/health)
 *   [actuator/info](http://localhost:8080/actuator/info)
 *   [actuator](http://localhost:8080/actuator)
@@ -70,7 +65,7 @@ There is also an <code>/actuator/shutdown</code> endpoint, but, by default, it i
 You can check the health of the application by running the following command:
 
 
-```
+```execute-1
 curl localhost:8080/actuator/health
 ```
 
@@ -82,7 +77,7 @@ This should show:
 You can try also to invoke shutdown through curl, to see what happens when you have not added the necessary line (shown in the preceding note) to `application.properties`:
 
 
-```bash
+```execute-1
 curl -X POST localhost:8080/actuator/shutdown
 ```
 The previous command will return something like

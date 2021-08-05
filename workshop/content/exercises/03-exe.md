@@ -30,12 +30,18 @@ text: "@RestController"
 ```
 
 
- `@RequestMapping` maps `/` to the `index()` method. When invoked from a browser or by using curl on the command line, the method returns pure text. 
-
- ```editor:select-matching-text
+ `@RequestMapping` maps `/` to the `index()` method. 
+  ```editor:select-matching-text
 file: ~/spring-boot/src/main/java/com/example/springboot/HelloController.java
 text: "@RequestMapping"
 ```
  
- That is because `@RestController` combines `@Controller` and `@ResponseBody`, two annotations that results in web requests returning data rather than a view.
+When invoked from a browser or by using curl on the command line, the method returns pure text. 
+ `@RequestMapping` maps `/` to the `index()` method. 
+  ```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/HelloController.java
+text: "Greetings from Spring Boot!"
+```
+
+That is because `@RestController` combines `@Controller` and `@ResponseBody`, two annotations that results in web requests returning data rather than a view.
 
