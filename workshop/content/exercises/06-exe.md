@@ -12,19 +12,6 @@ before: 2
 after: 2
 ```
 
-**delete later after testing**
-```editor:insert-lines-before-line
-file: ~/spring-boot/pom.xml
-line: 20
-text: |
-<dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-test</artifactId>
-	<scope>test</scope>
-</dependency>
-```
-
-
 Now write a simple unit test that mocks the servlet request and response through your endpoint, as the following listing (from `src/test/java/com/example/springboot/HelloControllerTest.java`) shows:
 
 
@@ -63,11 +50,28 @@ text: |
 ```
 
 
-`MockMvc` comes from Spring Test and lets you, through a set of convenient builder classes, send HTTP requests into the `DispatcherServlet` and make assertions about the result. Note the use of `@AutoConfigureMockMvc` and `@SpringBootTest` to inject a `MockMvc` instance. Having used `@SpringBootTest`, we are asking for the whole application context to be created. An alternative would be to ask Spring Boot to create only the web layers of the context by using `@WebMvcTest`. In either case, Spring Boot automatically tries to locate the main application class of your application, but you can override it or narrow it down if you want to build something different.
+`MockMvc` comes from Spring Test and lets you, through a set of convenient builder classes, send HTTP requests into the `DispatcherServlet` and make assertions about the result. 
+```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+text: "MockMvc"
+```
+Note the use of `@AutoConfigureMockMvc` and `@SpringBootTest` to inject a `MockMvc` instance. 
+```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+text: "@AutoConfigureMockMvc"
+```
+
+Having used `@SpringBootTest`, we are asking for the whole application context to be created. 
+```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+text: "@SpringBootTest"
+```
+
+An alternative would be to ask Spring Boot to create only the web layers of the context by using `@WebMvcTest`. In either case, Spring Boot automatically tries to locate the main application class of your application, but you can override it or narrow it down if you want to build something different.
 
 As well as mocking the HTTP request cycle, you can also use Spring Boot to write a simple full-stack integration test. For example, instead of (or as well as) the mock test shown earlier, we could create the following test (from `src/test/java/com/example/springboot/HelloControllerIT.java`):
 
-
+Let's have a bit of fun and include `HelloControllerIT.java`
 ```editor:append-lines-to-file
 file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerIT.java
 text: |
@@ -111,5 +115,14 @@ text: |
 		}
 ```
 
+The embedded server starts on a random port because of `webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT`
+```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+text: "webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT"
+```
 
-The embedded server starts on a random port because of `webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT`, and the actual port is discovered at runtime with `@LocalServerPort`.
+And the actual port is discovered at runtime with `@LocalServerPort`.
+```editor:select-matching-text
+file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+text: "@LocalServerPort"
+```
