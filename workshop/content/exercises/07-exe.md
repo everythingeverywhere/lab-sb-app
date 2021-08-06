@@ -25,7 +25,6 @@ Run the following command in a terminal window (in the `complete` directory):
 ./mvnw spring-boot:run
 ```
 
-
 You should see that a new set of RESTful end points have been added to the application. These are management services provided by Spring Boot. The following listing shows typical output:
 
 ```bash
@@ -43,6 +42,14 @@ management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.
 management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
 management.trace.http-org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceProperties
 ```
+You can check the health of the application by running the following command:
+```execute-1
+curl localhost:8080/actuator/health
+```
+This should show similar to:
+```bash
+{"status":"UP"}
+```
 
 
 The actuator exposes the following:
@@ -50,25 +57,15 @@ The actuator exposes the following:
 *   [actuator/info](http://localhost:8080/actuator/info)
 *   [actuator](http://localhost:8080/actuator)
 
-<table>
-  <tr>
-   <td>
-   </td>
-   <td>
-There is also an <code>/actuator/shutdown</code> endpoint, but, by default, it is visible only through JMX. To <a href="https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready-endpoints-enabling-endpoints">enable it as an HTTP endpoint</a>, add <code>management.endpoint.shutdown.enabled=true</code> to your <code>application.properties</code> file and expose it with <code>management.endpoints.web.exposure.include=health,info,shutdown</code>. However, you probably should not enable the shutdown endpoint for a publicly available application.
-   </td>
-  </tr>
-</table>
 
-
-You can check the health of the application by running the following command:
-```execute-1
-curl localhost:8080/actuator/health
+There is also an `/actuator/shutdown` endpoint, but, by default, it is visible only through JMX. To [enable it as an HTTP endpoint](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready-endpoints-enabling-endpoints), add `management.endpoint.shutdown.enabled=true` to your `application.properties` file and expose it with `management.endpoints.web.exposure.include=health,info,shutdown`. 
+```editor:append-lines-to-file
+file: ~/spring-boot/src/main/resources/application.properties
+text: |
+        management.endpoint.shutdown.enabled=true
+        management.endpoints.web.exposure.include=health,info,shutdown
 ```
-This should show:
-```bash
-{"status":"UP"}
-```
+However, you probably should not enable the shutdown endpoint for a publicly available application.
 
 You can try also to invoke shutdown through curl, to see what happens when you have not added the necessary line (shown in the preceding note) to `application.properties`:
 
