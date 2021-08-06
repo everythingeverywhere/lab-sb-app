@@ -48,15 +48,13 @@ curl localhost:8080/actuator/health
 ```
 This should show similar to:
 ```bash
-{"status":"UP"}
+{"status":"UP","groups":["liveness","readiness"]}
 ```
-
 
 The actuator exposes the following:
 *   [actuator/health](http://localhost:8080/actuator/health)
 *   [actuator/info](http://localhost:8080/actuator/info)
 *   [actuator](http://localhost:8080/actuator)
-
 
 There is also an `/actuator/shutdown` endpoint, but, by default, it is visible only through JMX. To [enable it as an HTTP endpoint](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready-endpoints-enabling-endpoints), add `management.endpoint.shutdown.enabled=true` to your `application.properties` file and expose it with `management.endpoints.web.exposure.include=health,info,shutdown`. 
 ```editor:append-lines-to-file
@@ -65,10 +63,18 @@ text: |
         management.endpoint.shutdown.enabled=true
         management.endpoints.web.exposure.include=health,info,shutdown
 ```
-However, you probably should not enable the shutdown endpoint for a publicly available application.
+However, you probably should *not* enable the shutdown endpoint for a publicly available application.
 
 You can try also to invoke shutdown through curl, to see what happens when you have not added the necessary line (shown in the preceding note) to `application.properties`:
 
+If you have the application still running you can terminate it with the next command:
+```terminal:interrupt
+session: 2
+```
+Restart your application.
+```execute-2
+./mvnw spring-boot:run
+```
 
 ```execute-1
 curl -X POST localhost:8080/actuator/shutdown
