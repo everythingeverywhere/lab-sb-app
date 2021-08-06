@@ -37,7 +37,7 @@ text: "@SpringBootApplication"
 The `main()` method uses Spring Boot’s `SpringApplication.run()` method to launch an application. 
 ```editor:select-matching-text
 file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
-text: "SpringApplication.run()"
+text: "SpringApplication.run(Application.class, args)"
 ```
 
 Add the `CommandLineRunner` method to complete this class
