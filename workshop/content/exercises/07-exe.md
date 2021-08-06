@@ -15,9 +15,10 @@ text: |
       </dependency>
 ```
 
-
-Then restart the application. If you use Gradle, run the following command in a terminal window (in the `complete` directory):
-
+If you have the application still running you can terminate it with the next command:
+```execute-2
+terminal:interrupt
+```
 Run the following command in a terminal window (in the `complete` directory):
 
 ```execute-2
