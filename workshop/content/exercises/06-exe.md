@@ -52,18 +52,18 @@ text: |
 
 `MockMvc` comes from Spring Test and lets you, through a set of convenient builder classes, send HTTP requests into the `DispatcherServlet` and make assertions about the result. 
 ```editor:select-matching-text
-file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+file: ~/spring-boot/src/test/java/com/example/springboot/ApplicationTests.java
 text: "MockMvc"
 ```
 Note the use of `@AutoConfigureMockMvc` and `@SpringBootTest` to inject a `MockMvc` instance. 
 ```editor:select-matching-text
-file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+file: ~/spring-boot/src/test/java/com/example/springboot/ApplicationTests.java
 text: "@AutoConfigureMockMvc"
 ```
 
 Having used `@SpringBootTest`, we are asking for the whole application context to be created. 
 ```editor:select-matching-text
-file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+file: ~/spring-boot/src/test/java/com/example/springboot/ApplicationTests.java
 text: "@SpringBootTest"
 ```
 
@@ -117,12 +117,12 @@ text: |
 
 The embedded server starts on a random port because of `webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT`
 ```editor:select-matching-text
-file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerIT.java
 text: "webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT"
 ```
 
 And the actual port is discovered at runtime with `@LocalServerPort`.
 ```editor:select-matching-text
-file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
+file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerIT.java
 text: "@LocalServerPort"
 ```
