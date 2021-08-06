@@ -54,7 +54,7 @@ text: "org.springframework.boot.autoconfigure"
 There is also a `tomcatEmbeddedServletContainerFactory` you can find in the output as the `spring-boot-starter-web` includes Tomcat 
 
 Now run the service with curl (in a separate terminal window), by running the following command:
-```execute-2
+```execute-1
 curl localhost:8080
 ```
 Output you should see should reflect the following

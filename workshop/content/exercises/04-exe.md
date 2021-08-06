@@ -75,6 +75,6 @@ When you click into the next set of instructions called *7: Run the Application*
 file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
 text: "Let's inspect the beans provided by Spring Boot:"
 ```
-In Spring, beans are the objects that are the foundation of your application and managed by IoC (Inversion of Control) also called Dependency Injection (DI). This allows the dependencies to be external from your application following cloud-native principles. In essence in Spring all objects are beans and it is essential you define your objects as beans to fully use Spring.
+In Spring, beans are the objects that are the foundation of your application and managed by IoC (Inversion of Control) also called Dependency Injection (DI). This allows the dependencies to be external from your application following cloud-native principles. In essence in Spring all objects are beans and it is essential you define your objects as beans.
 
 For a deeper dive on beans look into [this detailed documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction)
