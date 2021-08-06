@@ -16,8 +16,8 @@ text: |
 ```
 
 If you have the application still running you can terminate it with the next command:
-```execute-2
-terminal:interrupt
+```terminal:interrupt
+session: 2
 ```
 Run the following command in a terminal window (in the `complete` directory):
 
