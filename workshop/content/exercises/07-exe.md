@@ -65,7 +65,7 @@ text: |
 ```
 However, you probably should *not* enable the shutdown endpoint for a publicly available application.
 
-You can try also to invoke shutdown through curl, to see what happens when you have not added the necessary line (shown in the preceding note) to `application.properties`:
+You can try also to invoke shutdown through curl, to see what happens when you have not added the necessary line (shown in the preceding note) to `application.properties`.
 
 If you have the application still running you can terminate it with the next command:
 ```terminal:interrupt
