@@ -81,10 +81,8 @@ curl -X POST localhost:8080/actuator/shutdown
 ```
 The previous command will return something like
 ```bash
-{"timestamp":1401820343710,"error":"Not Found","status":404,"message":"","path":"/actuator/shutdown"}
+{"message":"Shutting down, bye..."}
 ```
-
-Because we did not enable it, the requested endpoint is not available (because the endpoint does not exist).
 
 For more details about each of these REST endpoints and how you can tune their settings with an `application.properties` file (in `src/main/resources`), see the the [documentation about the endpoints](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready-endpoints).
 
