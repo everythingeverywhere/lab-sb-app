@@ -14,15 +14,15 @@ Create a new file called `app.groovy` and put the following code in it:
 ```editor:append-lines-to-file
 file: ~/spring-boot/app.groovy
 text: |
-@RestController
-class ThisWillActuallyRun {
+      @RestController
+      class ThisWillActuallyRun {
 
-    @RequestMapping("/")
-    String home() {
-        return "Hello, World!"
-    }
+          @RequestMapping("/")
+          String home() {
+              return "Hello, World!"
+          }
 
-}
+      }
 ``` 
 
 It does not matter where the file is. You can even fit an application that small inside a [single tweet](https://twitter.com/rob_winch/status/364871658483351552)!
