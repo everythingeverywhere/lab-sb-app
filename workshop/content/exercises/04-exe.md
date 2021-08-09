@@ -1,6 +1,3 @@
-
-## Create an Application class
-
 The Spring Initializr creates a simple application class for you. However, in this case, it is too simple. You need to modify the application class to match the following listing (from `src/main/java/com/example/springboot/Application.java`):
 
 

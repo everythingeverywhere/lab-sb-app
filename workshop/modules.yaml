@@ -6,15 +6,15 @@ modules:
         name: Setup Environment
         exit_sign: Start Workshop
     exercises/01-sample-content:
-        name: Sample Content
+        name: Learn What You Can Do with Spring Boot
     exercises/02-exe:
-        name: Starting
+        name: Starting with Spring Initializr
     exercises/03-exe:
         name: Create a Simple Web Application
     exercises/04-exe:
-        name: Starting
+        name: Create an Application class
     exercises/05-exe:
-        name: Starting
+        name: Run the Application
     exercises/06-exe:
         name: Add Unit Tests
     exercises/07-exe:
@@ -22,5 +22,5 @@ modules:
     exercises/08-exe:
         name: View Spring Boot’s Starters
     workshop-summary:
-        name: Workshop Summary
+        name: Continue to Learn
         exit_sign: Finish Workshop

@@ -1,5 +1,3 @@
-## Learn What You Can Do with Spring Boot
-
 Spring Boot offers a fast way to build applications. It looks at your classpath and at the beans you have configured, makes reasonable assumptions about what you are missing, and adds those items. With Spring Boot, you can focus more on business features and less on infrastructure.
 
 The following examples show what Spring Boot can do for you:

@@ -1,6 +1,4 @@
 
-## Starting with Spring Initializr
-
 You need a new project with the dependency `Spring Web`. There are many ways to begin a new project from the most popular at the [Spring Initializr](start.spring.io) website, with the Spring Boot CLI, cloning repos, and using Spring Tools in your favorite IDE. 
 
 To make things easier your project is ready for you it is appropriately called `spring-boot` and has the `Spring Web` dependency with `Maven` as the build tool. 

@@ -1,5 +1,4 @@
 
-## Run the Application
 It's time now to run your app so you can see your beans print out in the terminal as well as interact with your web application.
 To run the application, run the following command.
 ```execute-2
