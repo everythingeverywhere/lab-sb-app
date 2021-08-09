@@ -58,12 +58,16 @@ fi
 # Sanity check that we have java
 if [ ! -f "${JAVA_HOME}/bin/java" ]; then
 	cat <<-JAVA_HOME_NOT_SET_TXT
+
 	======================================================================================================
 	 Please ensure that your JAVA_HOME points to a valid Java SDK.
 	 You are currently pointing to:
+
 	  ${JAVA_HOME}
+
 	 This does not seem to be valid. Please rectify and restart.
 	======================================================================================================
+
 	JAVA_HOME_NOT_SET_TXT
 	exit 1
 fi
