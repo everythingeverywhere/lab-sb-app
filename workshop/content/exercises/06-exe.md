@@ -1,6 +1,4 @@
 
-## Add Unit Tests
-
 You will want to add a test for the endpoint you added, and Spring Test provides some machinery for that.
 
 

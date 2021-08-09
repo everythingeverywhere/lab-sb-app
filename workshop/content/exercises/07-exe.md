@@ -1,7 +1,5 @@
 
-
-## Add Production-grade Services
-
+### Actuator module
 If you are building a web site for your business, you probably need to add some management services. Spring Boot provides several such services (such as health, audits, beans, and more) with its [actuator module](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready).
 
 Add the `spring-boot-starter-actuator ` dependency to your `pom.xml` file:
@@ -55,6 +53,8 @@ The actuator exposes the following:
 *   [actuator/health](http://localhost:8080/actuator/health)
 *   [actuator/info](http://localhost:8080/actuator/info)
 *   [actuator](http://localhost:8080/actuator)
+
+### Shutdown endpoint
 
 There is also an `/actuator/shutdown` endpoint, but, *by default*, it is visible only through JMX. To [enable it as an HTTP endpoint](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#production-ready-endpoints-enabling-endpoints), add `management.endpoint.shutdown.enabled=true` to your `application.properties` file and expose it with `management.endpoints.web.exposure.include=health,info,shutdown`. 
 ```editor:append-lines-to-file

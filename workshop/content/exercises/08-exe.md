@@ -1,10 +1,7 @@
 
-## View Spring Boot’s Starters
-
 You have seen some of [Spring Boot’s “starters”](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#using-boot-starter). You can see them all [here in source code](https://github.com/spring-projects/spring-boot/tree/main/spring-boot-project/spring-boot-starters).
 
-
-## JAR Support and Groovy Support
+### JAR Support and Groovy Support
 
 The last example showed how Spring Boot lets you wire beans that you may not be aware you need. It also showed how to turn on convenient management services.
 
@@ -14,8 +11,9 @@ On top of that, Spring Boot also has Groovy support, letting you build Spring MV
 
 Create a new file called `app.groovy` and put the following code in it:
 
-
-```
+```editor:append-lines-to-file
+file: ~/spring-boot/app.groovy
+text: |
 @RestController
 class ThisWillActuallyRun {
 
@@ -25,51 +23,29 @@ class ThisWillActuallyRun {
     }
 
 }
-COPY
+``` 
 
-
-<table>
-  <tr>
-   <td>```
-
-
-   </td>
-   <td>It does not matter where the file is. You can even fit an application that small inside a <a href="https://twitter.com/rob_winch/status/364871658483351552">single tweet</a>!
-   </td>
-  </tr>
-</table>
-
+It does not matter where the file is. You can even fit an application that small inside a [single tweet](https://twitter.com/rob_winch/status/364871658483351552)!
 
 Next, [install Spring Boot’s CLI](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#getting-started-installing-the-cli).
 
+Shut down the previous application, to avoid a port collision.
+```terminal:interrupt
+session: 2
+```
+
 Run the Groovy application by running the following command:
 
-
+```execute-2
+spring run app.groovy
 ```
-$ spring run app.groovy
-COPY
 
-
-<table>
-  <tr>
-   <td>```
-
-
-   </td>
-   <td>Shut down the previous application, to avoid a port collision.
-   </td>
-  </tr>
-</table>
-
-
-From a different terminal window, run the following curl command (shown with its output):
-
-
+From a different terminal window, run the following curl command:
+```execute-1
+curl localhost:8080
 ```
-$ curl localhost:8080
+Your output should reflect the following.
+```bash
 Hello, World!
-COPY
 ```
-
-
 Spring Boot does this by dynamically adding key annotations to your code and using [Groovy Grape](http://www.groovy-lang.org/Grape) to pull down the libraries that are needed to make the app run.

@@ -16,11 +16,11 @@ modules:
     exercises/05-exe:
         name: Starting
     exercises/06-exe:
-        name: Starting
+        name: Add Unit Tests
     exercises/07-exe:
-        name: Starting
+        name: Add Production-grade Services
     exercises/08-exe:
-        name: Starting
+        name: View Spring Boot’s Starters
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop
