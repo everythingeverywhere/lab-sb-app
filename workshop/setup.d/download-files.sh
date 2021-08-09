@@ -2,6 +2,8 @@
 
 mkdir bin
 
+cd bin
+
 # Install SDKMAN 
 curl -s "https://get.sdkman.io" | bash
 # make executable
