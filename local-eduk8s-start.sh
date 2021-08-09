@@ -1,4 +1,4 @@
-minikube start --insecure-registry=192.168.64.0/24 --cpus=4 --memory=8g --vm=true
+minikube start --insecure-registry=192.168.64.0/24 --cpus=8 --memory=11g --vm=true
 
 
 minikube addons enable ingress

@@ -1,6 +1,8 @@
 #!/bin/bash 
 
-# mkdir bin && cd bin
+export JAVA_HOME=/opt/java/bin/java
+
+# mkdir -p /home/eduk8s/bin && cd bin
 
 # # Install SDKMAN 
 # curl -s "https://get.sdkman.io" | bash
