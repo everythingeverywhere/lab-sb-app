@@ -10,7 +10,7 @@ modules:
     exercises/02-exe:
         name: Starting
     exercises/03-exe:
-        name: Starting
+        name: Create a Simple Web Application
     exercises/04-exe:
         name: Starting
     exercises/05-exe:
