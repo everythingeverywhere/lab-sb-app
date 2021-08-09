@@ -1,9 +1,9 @@
 modules:
     workshop-overview:
         name: Workshop Overview
-        exit_sign: Setup Environment
+        exit_sign: Building an Application with Spring Boot
     setup-environment:
-        name: Setup Environment
+        name: How to Use Real Environment
         exit_sign: Start Workshop
     exercises/01-sample-content:
         name: Learn What You Can Do with Spring Boot
