@@ -1,7 +1,7 @@
 #!/bin/bash 
 
-export PATH = $PATH:/home/eduk8s/bin/spring
-
+# export PATH = $PATH:/home/eduk8s/bin/spring
+export PATH=/home/eduk8s/bin/spring/bin:$PATH
 # mkdir -p /home/eduk8s/bin && cd bin
 
 # # Install SDKMAN 
