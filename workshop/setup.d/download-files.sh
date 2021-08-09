@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-export JAVA_HOME=/opt/java/bin/java
+export PATH = $PATH:/home/eduk8s/bin/spring
 
 # mkdir -p /home/eduk8s/bin && cd bin
 
