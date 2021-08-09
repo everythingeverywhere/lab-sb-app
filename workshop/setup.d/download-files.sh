@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-mkdir -p /home/eduk8s/bin && cd bin
-curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.0/spring-boot-cli-2.5.0-bin.zip -o /home/eduk8s/bin/spring
-export PATH=/home/eduk8s/bin/spring:$PATH
+mkdir -p /home/eduk8s/bin/springcli && cd bin
+curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.0/spring-boot-cli-2.5.0-bin.zip -o /home/eduk8s/bin/springcli/spring
+export PATH=/home/eduk8s/bin/springcli/spring:$PATH
 
 
 # # Install SDKMAN 
