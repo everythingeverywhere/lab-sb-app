@@ -5,7 +5,7 @@ mkdir bin
 cd bin
 
 # Install SDKMAN 
-curl -s "https://get.sdkman.io" -o /home/eduk8s/bin | bash
+curl -s "https://get.sdkman.io" -o /home/eduk8s/bin/sdkman-init.sh | bash
 # make executable
 source "/home/eduk8s/bin/.sdkman/bin/sdkman-init.sh"
 
