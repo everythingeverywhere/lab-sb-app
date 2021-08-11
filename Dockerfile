@@ -11,6 +11,7 @@ RUN mkdir -p /home/eduk8s/bin  && \
 
 WORKDIR /home/eduk8s/bin
 
-ENV spring=/home/eduk8s/bin/spring-2.5.3/bin/spring
+# ENV spring=/home/eduk8s/bin/spring-2.5.3/bin/spring:$PATH
+ENV PATH="/home/eduk8s/bin/spring-2.5.3/bin/spring:${PATH}"
 
 RUN fix-permissions /home/eduk8s
