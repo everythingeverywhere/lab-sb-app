@@ -1,19 +1,19 @@
 #!/bin/bash 
 
-mkdir -p /home/eduk8s/bin && cd bin
-curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.3/spring-boot-cli-2.5.3-bin.zip -o /home/eduk8s/bin/spring.zip
-unzip /home/eduk8s/bin/spring.zip
+mkdir -p /opt && cd bin
+curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.3/spring-boot-cli-2.5.3-bin.zip -o /opt/spring.zip
+unzip /opt/spring.zip
 
-# export SPRING_HOME=/home/eduk8s/bin/spring-2.5.3
-# export PATH=$SPRING_HOME/bin/spring:$PATH
-# chmod 777 /home/eduk8s/bin/spring
-# export PATH=/home/eduk8s/bin/springcli/spring:$PATH
+export SPRING_HOME=/opt/spring-2.5.3
+export PATH=$SPRING_HOME/bin/spring:$PATH
+# chmod 777 /opt/spring
+# export PATH=/opt/springcli/spring:$PATH
 
 
 # # Install SDKMAN 
 # curl -s "https://get.sdkman.io" | bash
 # # make executable
-# source "/home/eduk8s/bin/.sdkman/bin/sdkman-init.sh"
+# source "/opt/.sdkman/bin/sdkman-init.sh"
 cd ~
 export VERSION=2.5.1
 curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=$VERSION -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot.zip
