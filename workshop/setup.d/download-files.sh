@@ -1,8 +1,8 @@
 #!/bin/bash 
 
 mkdir -p /home/eduk8s/bin && cd bin
-curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.0/spring-boot-cli-2.5.0-bin.zip -o /home/eduk8s/bin/spring-2.5.0
-chmod 777 /home/eduk8s/bin/spring-2.5.0
+https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.3/spring-boot-cli-2.5.3-bin.zip -o /home/eduk8s/bin/spring-2.5.3
+chmod 777 /home/eduk8s/bin/spring-2.5.3
 # export PATH=/home/eduk8s/bin/springcli/spring:$PATH
 
 
