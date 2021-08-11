@@ -11,6 +11,6 @@ RUN mkdir -p /home/eduk8s/bin  && \
 
 WORKDIR /home/eduk8s/bin
 
-RUN curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.1/spring-boot-cli-2.5.1-bin.zip -o spring && fix-permissions /home/eduk8s/bin
+RUN  export PATH=/home/eduk8s/bin/spring-2.5.3/bin/sring:$PATH
 
 RUN fix-permissions /home/eduk8s
