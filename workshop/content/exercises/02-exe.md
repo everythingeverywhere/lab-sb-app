@@ -3,6 +3,12 @@ You need a new project with the dependency `Spring Web`. There are many ways to 
 
 To make things easier your project is ready for you it is appropriately called `spring-boot` and has the `Spring Web` dependency with `Maven` as the build tool. 
 
+```execute-1
+spring init --name=spring-boot --bootVersion=2.5.1 --artifactId=spring-boot --groupId=com.example --java-version=1.8 --dependencies=web --packaging=war spring-boot.zip
+```
+curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=2.5.1 -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot-initial.zip
+
+
 First, lets move into `spring-boot` in both teminals to make our commands relative to this path.
 ```execute-all
 cd spring-boot
