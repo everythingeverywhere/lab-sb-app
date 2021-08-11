@@ -5,7 +5,7 @@ curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5
 unzip /home/eduk8s/bin/spring.zip
 
 export SPRING_HOME=/path/to/your/extracted-spring-cli/spring-2.5.3
-export PATH=$SPRING_HOME/bin:$PATH
+export PATH=$SPRING_HOME/bin/sring:$PATH
 # chmod 777 /home/eduk8s/bin/spring
 # export PATH=/home/eduk8s/bin/springcli/spring:$PATH
 
