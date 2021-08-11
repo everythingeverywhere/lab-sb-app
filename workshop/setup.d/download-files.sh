@@ -4,8 +4,8 @@ mkdir -p /home/eduk8s/bin && cd bin
 curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.3/spring-boot-cli-2.5.3-bin.zip -o /home/eduk8s/bin/spring.zip
 unzip /home/eduk8s/bin/spring.zip
 
-export SPRING_HOME=/home/eduk8s/bin/spring-2.5.3
-export PATH=$SPRING_HOME/bin/spring:$PATH
+# export SPRING_HOME=/home/eduk8s/bin/spring-2.5.3
+# export PATH=$SPRING_HOME/bin/spring:$PATH
 # chmod 777 /home/eduk8s/bin/spring
 # export PATH=/home/eduk8s/bin/springcli/spring:$PATH
 
