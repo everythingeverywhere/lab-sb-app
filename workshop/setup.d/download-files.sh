@@ -2,10 +2,11 @@
 
 cd opt
 curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.3/spring-boot-cli-2.5.3-bin.zip -o /opt/spring.zip
-unzip /opt/spring.zip -d /opt/spring-2.5.3
+unzip /opt/spring.zip -d /opt
 
-export SPRING_HOME=/opt/spring-2.5.3
-export PATH=$SPRING_HOME/bin/spring:$PATH
+echo 'alias spring="/opt/spring-2.5.3"' >> ~/.bash_profile
+# export SPRING_HOME=/opt/spring-2.5.3
+# export PATH=$SPRING_HOME/bin/spring:$PATH
 # chmod 777 /opt/spring
 # export PATH=/opt/springcli/spring:$PATH
 
