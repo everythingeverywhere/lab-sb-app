@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-mkdir -p /opt && cd bin
+cd opt
 curl https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.5.3/spring-boot-cli-2.5.3-bin.zip -o /opt/spring.zip
-unzip /opt/spring.zip
+unzip /opt/spring.zip 
 
 export SPRING_HOME=/opt/spring-2.5.3
 export PATH=$SPRING_HOME/bin/spring:$PATH
