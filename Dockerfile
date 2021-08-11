@@ -11,6 +11,6 @@ RUN mkdir -p /home/eduk8s/bin  && \
 
 WORKDIR /home/eduk8s/bin
 
-RUN  export PATH=/home/eduk8s/bin/spring-2.5.3/bin/sring:$PATH
+ENV PATH=/home/eduk8s/bin/spring-2.5.3/bin/sring:$PATH
 
 RUN fix-permissions /home/eduk8s
