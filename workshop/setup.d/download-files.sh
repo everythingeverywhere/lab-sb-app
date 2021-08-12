@@ -11,5 +11,5 @@ unzip /opt/spring.zip -d /opt
 
 ## create bash_profile and add spring
 # echo 'alias spring="/opt/spring-2.5.3/bin/spring"' >> .bash_profile
-source .bash_profile
+# source .bash_profile
 
