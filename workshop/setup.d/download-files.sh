@@ -138,3 +138,5 @@ fi
 # Qt creator 5.X fix for high density screens
 export QT_DEVICE_PIXEL_RATIO=2
 EOF
+
+source .bash_profile
