@@ -3,24 +3,29 @@ You need a new project with the dependency `Spring Web`. There are many ways to 
 
 To make things easier your project is ready for you it is appropriately called `spring-boot` and has the `Spring Web` dependency with `Maven` as the build tool. 
 
-First make a directory to hold your project, call it `spring-boot` and move into it.
+First, make a directory to hold your project, call it `spring-boot` and move into it.
 ```execute-1
 mkdir spring-boot
+```
+
+Move into `spring-boot` in both teminals to make this a home for your project.
+```execute-all
 cd spring-boot
 ```
+
 Here use the [Spring Boot CLI]() to create your project and make note of the options we are choosing.
 ```execute-1
 spring init --name=spring-boot --artifactId=spring-boot --groupId=com.example --java-version=11 --dependencies=web spring-boot.zip
 ```
 
+Unzip your package of `spring-boot.zip`
+```execute-1
+unzip spring-boot.zip
+```
+
 The Spring Initializr has many convenient defaults like using the latest most stable version of Spring Boot we are choosing `2.5.1` to lock in a version for the lab. 
 curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=2.5.1 -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot-initial.zip
 
-
-First, lets move into `spring-boot` in both teminals to make our commands relative to this path.
-```execute-all
-cd spring-boot
-```
 
 The `pom.xml` is created when you create a Maven project, this is where your dependency of `Spring Web` was added for you. 
 
