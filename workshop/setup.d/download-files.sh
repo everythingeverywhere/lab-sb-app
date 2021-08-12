@@ -12,6 +12,6 @@ unzip /opt/spring.zip -d /opt
 echo 'alias spring="/opt/spring-2.5.3/bin/spring"' >> ~/.bash_profile
 
 # download
-cd ~
-export VERSION=2.5.1
-curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=$VERSION -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot.zip
+# cd ~
+# export VERSION=2.5.1
+# curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=$VERSION -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot.zip
