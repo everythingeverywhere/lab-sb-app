@@ -23,22 +23,15 @@ Run the following command in a terminal window (in the `complete` directory):
 ./mvnw spring-boot:run
 ```
 
-You should see that a new set of RESTful end points have been added to the application. These are management services provided by Spring Boot. The following listing shows typical output:
+You should see that a new set of RESTful end points have been added to the application. These are management services provided by Spring Boot. 
 
+The following listing shows typical output(truncated for readibility):
 ```bash
 management.endpoint.configprops-org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties
 management.endpoint.env-org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties
 management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties
 management.endpoint.logfile-org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties
-management.endpoints.jmx-org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties
-management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties
-management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
-management.health.status-org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorProperties
-management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties
-management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties
-management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
-management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
-management.trace.http-org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceProperties
+...
 ```
 You can now check the health of the application by running the following command:
 ```execute-1
