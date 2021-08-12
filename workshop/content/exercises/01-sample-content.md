@@ -1,7 +1,7 @@
 Spring Boot offers a fast way to build applications. It looks at your classpath and at the beans you have configured, makes reasonable assumptions about what you are missing, and adds those items. With Spring Boot, you can focus more on business features and less on infrastructure.
 
 The following examples show what Spring Boot can do for you: 
-> The examples will make more sense if you have used Spring but knowledge in Spring isn't required to complete this lab and you will have a greater understanding of these concecpts.
+> The examples below make more sense if you have used Spring but knowledge in Spring isn't required to complete this lab and you will have a greater understanding of these concecpts when finished.
 *   Is Spring MVC on the classpath? 
     * There are several specific beans you almost always need, and Spring Boot adds them automatically. A Spring MVC application also needs a servlet container, so Spring Boot automatically configures embedded Tomcat.
 *   Is Jetty on the classpath? 

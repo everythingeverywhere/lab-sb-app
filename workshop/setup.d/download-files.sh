@@ -13,7 +13,7 @@ echo 'alias spring="/opt/spring-2.5.3/bin/spring"' >> ~/.bash_profile
 
 # download zsh to try it out
 cd ~
-sudo yum update && sudo yum -y install zsh
+yum update && yum -y install zsh
 
 # export VERSION=2.5.1
 # curl -G https://start.spring.io/starter.zip -d dependencies=web -d bootVersion=$VERSION -d artifactId=spring-boot -d name=spring-boot -d groupId=com.example -d language=java -o spring-boot.zip

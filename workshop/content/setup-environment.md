@@ -21,8 +21,7 @@ The workshop features a built-in code editor you can use by pressing the `Editor
 The files in this editor save automatically.
 
 Select the **Editor** tab now to display it, or click on the action block below.
-> The editor takes a few moments to load.
-> Pressing the refresh button in the workshop's UI can help the editor load when switching tabs.
+> The editor may takes a few moments to load on the first attempt.
 ```dashboard:open-dashboard
 name: Editor
 ```
