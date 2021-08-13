@@ -2,7 +2,9 @@
 You will want to add a test for the endpoint you added, and Spring Test provides some machinery for that.
 
 
-If you use Maven, the `spring-boot-starter-test` dependency should be added to your `pom.xml` file.
+You are using Maven, the `spring-boot-starter-test` dependency should already be added to your `pom.xml` file.
+
+Click to find your `spring-boot-starter-test` dependency.
 ```editor:select-matching-text
 file: ~/spring-boot/pom.xml
 text: "spring-boot-starter-test"
@@ -11,8 +13,6 @@ after: 2
 ```
 
 Now write a simple unit test that mocks the servlet request and response through your endpoint, as the following listing (from `src/test/java/com/example/springboot/HelloControllerTest.java`) shows:
-
-
 ```editor:append-lines-to-file
 file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerTest.java
 text: |
@@ -53,6 +53,7 @@ text: |
 file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerTest.java
 text: "MockMvc"
 ```
+
 Note the use of `@AutoConfigureMockMvc` and `@SpringBootTest` to inject a `MockMvc` instance. 
 ```editor:select-matching-text
 file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerTest.java
@@ -123,4 +124,15 @@ And the actual port is discovered at runtime with `@LocalServerPort`.
 ```editor:select-matching-text
 file: ~/spring-boot/src/test/java/com/example/springboot/HelloControllerIT.java
 text: "@LocalServerPort"
+```
+
+### Optional - Running Tests
+There are many ways to run your tests, we will simply use `mvn test`.
+```execute-2
+mvn test 
+```
+
+Scrolling through your output you can find your tests as in the following example.
+```bash
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.706 s - in com.example.springboot.HelloControllerTest
 ```

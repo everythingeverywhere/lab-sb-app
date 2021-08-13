@@ -1,4 +1,4 @@
-The [Spring Initializr](start.spring.io) creates a simple application class for you. However, in this case, it is too simple. You need to modify the application class to match the following listing (from `src/main/java/com/example/springboot/Application.java`):
+The [Spring Initializr](start.spring.io) creates a simple application class for you. However, in this case, it is too simple. You need to modify the application class in `src/main/java/com/example/springboot/Application.java`
 
 Import the Arrays class, this class provides static methods to dynamically create and access Java arrays.
 ```editor:insert-lines-before-line
