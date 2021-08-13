@@ -7,3 +7,4 @@
 ./resources
 ./local-eduk8s-start.sh
 ./delete-all.sh
+local-eduk8s-start.sh
