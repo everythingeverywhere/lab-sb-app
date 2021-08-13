@@ -1,5 +1,4 @@
-Now you can create a web controller for a simple web application, as the following listing (from `src/main/java/com/example/springboot/HelloController.java`) shows:
-
+Now create a web controller for a simple web application in `src/main/java/com/example/springboot/HelloController.java`:
 ```editor:append-lines-to-file
 file: ~/spring-boot/src/main/java/com/example/springboot/HelloController.java
 text: |
@@ -18,7 +17,6 @@ text: |
 
         }
 ```
-
 
 The class is flagged as a `@RestController`, meaning it is ready for use by Spring MVC to handle web requests.
 ```editor:select-matching-text
