@@ -19,7 +19,7 @@ text: |
 
           @RequestMapping("/")
           String home() {
-              return "Hello, World! \n"
+              return "Hello, World!"
           }
 
       }
