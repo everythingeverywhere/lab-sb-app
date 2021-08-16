@@ -13,10 +13,11 @@ Move into `spring-boot` in both teminals to make this a home for your project.
 ```execute-all
 cd spring-boot
 ```
+### Initialize your project with the [Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/cli.html). 
 
-The lab has the [Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/cli.html) already integrated and we you will use it to create your project. Make note of the options we are choosing in particular that we are choosing the `web` dependency.
+This lab utilizes the [Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/cli.html) to create your project. Make note of the options and in particular that we are choosing the `web` dependency.
 
-Initialize your project with the [Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/cli.html). Here you are choosing to have it packaged as a zip.
+Create your Spring Boot project.
 ```execute-1
 spring init --name=spring-boot --artifactId=spring-boot --groupId=com.example --java-version=11 --dependencies=web spring-boot.zip
 ```
@@ -28,7 +29,7 @@ unzip spring-boot.zip
 
 The `pom.xml` is created when you create a Maven project, this is where your dependency of `Spring Web` was added for you. 
 
-Click the following command to see your `Spring Web`dependency in your `pom.xml`.
+Click the following command to see your `Spring Web` dependency in your `pom.xml`.
 ```editor:select-matching-text
 file: ~/spring-boot/pom.xml
 text: "spring-boot-starter-web"
