@@ -134,5 +134,10 @@ mvn test
 
 Scrolling through your output you can find your tests as in the following example.
 ```bash
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.706 s - in com.example.springboot.HelloControllerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.381 s - in com.example.springboot.ApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
 ```
