@@ -1,7 +1,7 @@
 ### [Spring Initializr](start.spring.io)
 You need a new project with the dependency `Spring Web`. There are many ways to begin a new project from the [Spring Initializr](start.spring.io) website, with the Spring Boot CLI, cloning repos, and using Spring Tools in your favorite IDE. The Spring Boot CLI and Spring Tools both leverage the [Spring Initializr](start.spring.io) when creating new projects.
 
-The [Spring Initializr](start.spring.io)'s popularity is due to many reasons one of the main reasons is it makes everything easier and faster by automatically configuring your applications. It uses industry best practices for these configurations so you don't have to  re-invent the wheel. [Spring Initializr](start.spring.io) has a wide array of dependencies and options to choose giving you what you need to get started.
+The [Spring Initializr](start.spring.io)'s popularity is due to many reasons one of the main reasons is it makes everything easier and faster by automatically configuring your applications. It uses industry best practices for these configurations so you don't have to  re-invent the wheel. [Spring Initializr](start.spring.io) has a wide array of dependencies and options giving you what you need to get started.
 
 ### Initialize your project 
 First, make a directory to hold your project, call it `spring-boot`.
