@@ -141,3 +141,8 @@ Scrolling through your output you can find your tests as in the following exampl
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 ```
+
+Stop the application that's running.
+```execute-all
+<ctrl+c>
+```

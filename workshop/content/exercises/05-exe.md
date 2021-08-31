@@ -19,6 +19,11 @@ helloController
 ...
 ```
 
+Stop your application to continue.
+```execute-2
+<ctrl+c>
+```
+
 You can clearly see `org.springframework.boot.autoconfigure` beans. 
 ```editor:select-matching-text
 file: ~/spring-boot/src/main/java/com/example/springboot/Application.java
